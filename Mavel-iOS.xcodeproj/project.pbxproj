@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3956331D2AB6ECCC00B8071D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956331C2AB6ECCC00B8071D /* AppDelegate.swift */; };
-		3956331F2AB6ECCC00B8071D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956331E2AB6ECCC00B8071D /* SceneDelegate.swift */; };
 		395633212AB6ECCC00B8071D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395633202AB6ECCC00B8071D /* ViewController.swift */; };
 		395633242AB6ECCC00B8071D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395633222AB6ECCC00B8071D /* Main.storyboard */; };
 		395633272AB6ECCC00B8071D /* Mavel_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 395633252AB6ECCC00B8071D /* Mavel_iOS.xcdatamodeld */; };
@@ -19,7 +18,6 @@
 /* Begin PBXFileReference section */
 		395633192AB6ECCC00B8071D /* Mavel-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mavel-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3956331C2AB6ECCC00B8071D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3956331E2AB6ECCC00B8071D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		395633202AB6ECCC00B8071D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		395633232AB6ECCC00B8071D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		395633262AB6ECCC00B8071D /* Mavel_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mavel_iOS.xcdatamodel; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				3956331C2AB6ECCC00B8071D /* AppDelegate.swift */,
-				3956331E2AB6ECCC00B8071D /* SceneDelegate.swift */,
 				395633202AB6ECCC00B8071D /* ViewController.swift */,
 				395633222AB6ECCC00B8071D /* Main.storyboard */,
 				395633282AB6ECCC00B8071D /* Assets.xcassets */,
@@ -144,7 +141,6 @@
 				395633212AB6ECCC00B8071D /* ViewController.swift in Sources */,
 				395633272AB6ECCC00B8071D /* Mavel_iOS.xcdatamodeld in Sources */,
 				3956331D2AB6ECCC00B8071D /* AppDelegate.swift in Sources */,
-				3956331F2AB6ECCC00B8071D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
