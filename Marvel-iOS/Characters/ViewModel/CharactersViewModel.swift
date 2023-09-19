@@ -126,8 +126,7 @@ public final class CharactersViewModel {
 
             // Perform the batch delete
             do {
-                let batchDelete = try context.execute(deleteRequest)
-                    as? NSBatchDeleteResult
+                try context.execute(deleteRequest)
                 completion()
             } catch {
                 print("Failed Deleting")
