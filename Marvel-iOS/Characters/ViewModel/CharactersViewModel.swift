@@ -46,8 +46,11 @@ public final class CharactersViewModel {
                    characters.isEmpty == false {
                     self.characters.value = characters
                     self.isLoading = false
-                    // Store Data retireved From API to Core Data
-                    self.storeData(characters: characters)
+                    // Delete Stored Data
+                    self.deleteData {
+                        // Store Data retireved From API to Core Data
+                        self.storeData(characters: characters)
+                    }
                 }
             case .failure(let error):
                 print("Error : \(error.localizedDescription)")
@@ -103,6 +106,31 @@ public final class CharactersViewModel {
                 try context.save()
             } catch {
                 print("Failed Saving")
+            }
+        }
+    }
+    
+    // This Function delete the stored Data
+    private func deleteData(completion : @escaping (() -> Void)) {
+        DispatchQueue.main.async {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let fetchRequest: NSFetchRequest<NSFetchRequestResult>
+            fetchRequest = NSFetchRequest(entityName: "Characters")
+            // Create a batch delete request for the
+            // fetch request
+            let deleteRequest = NSBatchDeleteRequest(
+                fetchRequest: fetchRequest
+            )
+            deleteRequest.resultType = .resultTypeObjectIDs
+
+            // Perform the batch delete
+            do {
+                let batchDelete = try context.execute(deleteRequest)
+                    as? NSBatchDeleteResult
+                completion()
+            } catch {
+                print("Failed Deleting")
             }
         }
     }
